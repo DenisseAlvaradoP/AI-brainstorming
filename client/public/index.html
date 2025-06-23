@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Brainstorming AI App" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- ⭐ Google Fonts: Orbitron (estilo futurista) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Brainstorming AI</title>
+
+    <style>
+      /* 🎨 Estilos base futuristas */
+
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+      }
+
+      body {
+        font-family: 'Orbitron', sans-serif;
+        background: linear-gradient(145deg, #1e1e2f, #2b2b45);
+        color: #ffffff;
+
+        /* Importante: quitar flex para que ocupe todo el espacio */
+        display: block;
+        overflow-x: hidden;
+      }
+
+      #root {
+        width: 100vw;   /* Ocupa todo el ancho */
+        height: 100vh;  /* Ocupa todo el alto */
+
+        /* Ajustes visuales opcionales */
+        padding: 0;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 0;
+        box-shadow: none;
+        backdrop-filter: blur(10px);
+        max-width: 100%;
+      }
+
+      /* Animación neonGlow para el título */
+      @keyframes neonGlow {
+        from {
+          text-shadow:
+            0 0 8px #00ffff,
+            0 0 20px #00ffff,
+            0 0 30px #00ffff,
+            0 0 40px #00ffff;
+        }
+        to {
+          text-shadow:
+            0 0 20px #00ffff,
+            0 0 30px #00ffff,
+            0 0 40px #00ffff,
+            0 0 60px #00ffff;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>
