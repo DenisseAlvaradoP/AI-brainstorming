@@ -4,7 +4,7 @@ import ChatArea from "../components/ChatArea";
 import { fetchAIData } from "../utils/fetchAIData";
 import io from "socket.io-client";
 
-const socket = io("http://localhost:5000");
+const socket = io("https://ai-brainstorming-server.onrender.com");
 
 const GroupChat = () => {
   const { code } = useParams();
@@ -63,7 +63,7 @@ const GroupChat = () => {
   const handleAnalyze = async () => {
     try {
       setLoadingAI(true);
-      const res = await fetch(`http://localhost:5000/api/ai/analyze/${code}`);
+      const res = await fetch(`https://ai-brainstorming-server.onrender.com/api/ai/analyze/${code}`);
       if (!res.ok) throw new Error("Error analizando");
       const data = await res.json();
       setKeywords(data.keywords);

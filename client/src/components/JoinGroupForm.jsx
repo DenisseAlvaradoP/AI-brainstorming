@@ -25,7 +25,7 @@ const JoinGroupForm = () => {
 
     setLoading(true);
     try {
-      await axios.post("http://localhost:5000/api/group/join", {
+      await axios.post( "https://ai-brainstorming-6k39.onrender.com/api/group/join", {
         name,
         code,
         role,
