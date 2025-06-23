@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: ai-brainstorming-backend
+    env: node
+    buildCommand: cd server && npm install
+    startCommand: node index.js
+    envVars:
+      - key: PORT
+        value: 5000
+    plan: free
+
+  - type: web
+    name: ai-brainstorming-frontend
+    env: static
+    buildCommand: cd client && npm install && npm run build
+    staticPublishPath: client/build
+    plan: free
