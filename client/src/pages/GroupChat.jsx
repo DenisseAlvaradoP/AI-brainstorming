@@ -4,7 +4,7 @@ import ChatArea from "../components/ChatArea";
 import { fetchAIData } from "../utils/fetchAIData";
 import io from "socket.io-client";
 
-const socket = io("https://ai-brainstorming-server.onrender.com");
+const socket = io("https://ai-brainstorming-6k39.onrender.com");
 
 const GroupChat = () => {
   const { code } = useParams();

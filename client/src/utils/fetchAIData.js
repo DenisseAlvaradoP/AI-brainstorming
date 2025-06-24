@@ -1,7 +1,9 @@
-// src/api/fetchAI.js (o donde prefieras)
+// src/api/fetchAI.js
+const BACKEND_URL = "https://ai-brainstorming-server.onrender.com";
+
 export async function fetchAIData(groupCode) {
   try {
-    const response = await fetch(`/api/ai/analyze/${groupCode}`);
+    const response = await fetch(`${BACKEND_URL}/api/ai/analyze/${groupCode}`);
     if (!response.ok) {
       throw new Error("Error al obtener datos de IA");
     }

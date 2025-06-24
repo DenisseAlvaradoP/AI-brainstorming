@@ -22,7 +22,10 @@ const io = new Server(server, {
 });
 
 // Middlewares
-app.use(cors());
+app.use(cors({
+  origin: "https://ai-brainstorming-1.onrender.com",
+  credentials: true,
+}));
 app.use(express.json());
 
 // Rutas
