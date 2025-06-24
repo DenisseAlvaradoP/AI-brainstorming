@@ -10,7 +10,7 @@ const CreateGroupForm = () => {
   const handleCreate = async () => {
     if (!name.trim()) return alert("Please enter your name.");
     try {
-      const res = await axios.post(`${BASE_URL}/api/group/create`, {
+      const res = await axios.post("http://localhost:5000/api/group/create", {
         name,
         role,
       });
